@@ -1,0 +1,131 @@
+:root{
+/* Colors */
+
+/* Primary */
+    --red-Primary-Color:hsl(0, 100%, 74%);
+    --green-Primary-Color:hsl(154, 59%, 51%);
+/* Accent */    
+    --blue-Accent-Color:hsl(248, 32%, 49%);
+/* Neutral */    
+    --darkBlue-Neutral-Color:hsl(249, 10%, 26%) ;
+    --grayishblue-Neutral-Color:hsl(246, 25%, 77%);
+}
+
+body{
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--red-Primary-Color);
+}
+
+.mainBody{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.leftside{
+    display: grid;
+    text-align: start;
+    align-self: center;
+    padding: 0rem 2rem;
+}
+.headerText{
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 5%;
+}
+.subText{
+    color: white;
+    margin-top: 0px;
+    line-height: 2rem;
+}
+
+
+.rightSide{
+    text-align: center;
+}
+.offerHeaderText{
+    color: white;
+    background-color: var(--blue-Accent-Color);
+    border-radius: 10px;
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+.userForm{
+    background-color:white;
+    border-radius: 10px;
+}
+.formGroup{
+    text-align: center;
+    padding: 3rem 0rem;
+    }
+#fName,#password,#lName,#eamil{
+    color: var(--darkBlue-Neutral-Color);
+    border: solid var(--grayishblue-Neutral-Color) 1px;
+    padding: 0.7rem;
+    border-radius: 5px;
+    width: 80%;
+}
+#fName:hover,
+#password:hover,
+#lName:hover,
+#eamil:hover{
+border-color: var(--blue-Accent-Color);
+cursor: pointer;
+}
+/* :focus-visible,
+:focus-visible,
+:focus-visible, */
+input:focus-visible{
+border-color: var(--blue-Accent-Color);
+
+
+}
+
+.errorFirstName,
+.errorLastName,
+.errorEmailInput,
+.errorPasswordInput{
+    color: var(--red-Primary-Color);
+    font-size: 1rem;
+  
+}
+.submitOffer{
+    background-color: var(--green-Primary-Color);
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    padding: 1rem;
+    width: 80%;
+}
+.submitOffer:hover,.termsServicesAgreeing:hover{
+    cursor: pointer;
+}
+
+.termsServicesAgreeing{
+    color:var(--grayishblue-Neutral-Color);
+}
+.redText{
+    color: var(--red-Primary-Color);
+    
+}
+
+@media screen and (min-width:768px) {
+    body{
+        background-image: url(./images/bg-intro-mobile.png);
+        background-color: var(--red-Primary-Color);
+    }
+    .mainBody{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .headerText{
+        color: white;
+        font-size: 5rem;
+        margin-bottom: 5%;
+    }
+    .subText{
+        color: white;
+        margin-top: 0px;
+        line-height: 3rem;
+        font-size: 2rem;
+    }
+}
